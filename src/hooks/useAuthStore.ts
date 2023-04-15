@@ -16,7 +16,7 @@ export const useAuthStore = () => {
         dispatch( onChecking() )
 
         try {
-            const { data } = await calendarApi.post('auth', { email, password })
+            const { data } = await calendarApi.post('/auth', { email, password })
             
             localStorage.setItem('token', data.token)
             localStorage.setItem('token-init-date', new Date().getTime().toString() )
@@ -40,7 +40,7 @@ export const useAuthStore = () => {
         dispatch( onChecking() )
 
         try {
-            const { data } = await calendarApi.post('auth/new', { email, password, name })
+            const { data } = await calendarApi.post('/auth/new', { email, password, name })
             
             localStorage.setItem('token', data.token)
             localStorage.setItem('token-init-date', new Date().getTime().toString() )
@@ -67,7 +67,7 @@ export const useAuthStore = () => {
         if( !token )  return dispatch( onLogout() )
 
         try {
-            const { data } = await calendarApi.get('auth/renew') 
+            const { data } = await calendarApi.get('/auth/renew') 
 
             localStorage.setItem('token', data.token)
             localStorage.setItem('token-init-date', new Date().getTime().toString() )
