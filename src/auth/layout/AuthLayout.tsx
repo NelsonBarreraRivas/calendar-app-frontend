@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export const AuthLayout = () => {
 
 
-    console.log(import.meta.env.VITE_API_URL, 'hola')
+    console.log(import.meta.env)
 
     return (
         <>
