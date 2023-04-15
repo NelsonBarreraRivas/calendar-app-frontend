@@ -14,7 +14,8 @@ export const store = configureStore({
     },
     middleware: ( getDefaultMiddleware ) => getDefaultMiddleware( {
         serializableCheck: false
-    } )
+    } ),
+    devTools: import.meta.env.NODE_ENV === 'development'
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
