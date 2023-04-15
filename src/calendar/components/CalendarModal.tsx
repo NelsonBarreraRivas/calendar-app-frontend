@@ -164,7 +164,7 @@ export const CalendarModal = () => {
 
                 <div>
                     <div className="flex justify-between">
-                        <label htmlFor="title" className="block text-sm font-medium text-gray-900">Titulo</label><small className="italic underline">Una descripción corta</small>
+                        <label htmlFor="title" className="block text-sm font-medium text-gray-900">Titulo</label><small className="italic underline select-none">Una descripción corta</small>
                     </div>
                     <input
                         type="text"
@@ -183,7 +183,7 @@ export const CalendarModal = () => {
 
                 <div>
                     <div className="flex justify-between">
-                        <label htmlFor="notes" className="block text-sm font-medium text-gray-900">Notas</label><small className="italic underline">Información adicional</small>
+                        <label htmlFor="notes" className="block text-sm font-medium text-gray-900">Notas</label><small className="italic underline select-none">Información adicional</small>
                     </div>
                     <textarea
                         className={`bg-gray-50 resize-none focus:outline-none border-2 border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:border-primary-600 block w-full p-2.5`}
