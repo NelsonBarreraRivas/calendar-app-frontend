@@ -6,6 +6,11 @@
 body{
     overflow-x: hidden;
     overflow-y: auto;
+    
+}
+
+::-ms-reveal {
+    display: none;
 }
 
 button{

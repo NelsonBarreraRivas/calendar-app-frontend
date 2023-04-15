@@ -21,7 +21,7 @@ export const useAuthStore = () => {
             localStorage.setItem('token', data.token)
             localStorage.setItem('token-init-date', new Date().getTime().toString() )
 
-            dispatch( onLogin( { name: data.name, uid: data.uid } ) )
+            dispatch( onLogin( { name: data.name, uid: data.uid, photoURL: data.photoURL } ) )
             
         } catch (error) {
             console.error(error)
@@ -45,7 +45,7 @@ export const useAuthStore = () => {
             localStorage.setItem('token', data.token)
             localStorage.setItem('token-init-date', new Date().getTime().toString() )
 
-            dispatch( onLogin( { name: data.name, uid: data.uid } ) )
+            dispatch( onLogin( { name: data.name, uid: data.uid, photoURL: data.photoURL } ) )
             
         } catch (error: any) {
             console.error(error)
@@ -72,7 +72,10 @@ export const useAuthStore = () => {
             localStorage.setItem('token', data.token)
             localStorage.setItem('token-init-date', new Date().getTime().toString() )
 
-            dispatch( onLogin( { name: data.name, uid: data.uid } ) )
+            console.log(data);
+            
+
+            dispatch( onLogin( { name: data.name, uid: data.uid, photoURL: data.photoURL } ) )
 
         } catch (error: any) {
 

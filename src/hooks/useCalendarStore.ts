@@ -127,6 +127,10 @@ export const useCalendarStore = () => {
         }
     }
 
+    const startClearActiveEvent = () => {
+        dispatch( clearActiveEvent() )
+    }
+
     return {
         events,
         activeEvent,
@@ -135,7 +139,8 @@ export const useCalendarStore = () => {
         startSavingEvent,
         startDeleteEvent,
         startLoadingEvents,
-        isLoadingEvent
+        isLoadingEvent,
+        startClearActiveEvent
     }
 
 }

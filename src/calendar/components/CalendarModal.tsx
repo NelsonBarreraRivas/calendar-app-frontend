@@ -96,6 +96,8 @@ export const CalendarModal = () => {
                     ...activeEvent
                 }
             }) )
+        }else{
+            resetForm()
         }
     }, [activeEvent])
     

@@ -11,17 +11,17 @@ export const authSlice = createSlice({
     reducers: {
         onChecking: ( state ) => {
             state.status = 'checking'
-            state.user = {} as { name: string, uid: string }
+            state.user = {} as { name: string, uid: string, photoURL: string }
             state.errorMessage = undefined
         },
         onLogin : ( state, { payload } : PayloadAction<{[key: string]: string}>) => {
             state.status = 'authenticated'
-            state.user = payload as { name: string, uid: string }
+            state.user = payload as { name: string, uid: string, photoURL: string }
             state.errorMessage= undefined
         },
         onLogout: ( state ) => {
             state.status= 'not-authenticated'
-            state.user= {} as { name: string, uid: string }
+            state.user= {} as { name: string, uid: string, photoURL: string }
         },
         clearErrorMessage: ( state ) => {
             state.errorMessage = undefined

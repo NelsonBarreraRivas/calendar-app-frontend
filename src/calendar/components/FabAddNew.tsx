@@ -1,14 +1,15 @@
-import { addHours } from "date-fns"
+
 import { BsPlusLg } from "react-icons/bs"
 import { useCalendarStore, useUIStore } from "../../hooks"
-import { Event } from "../interfaces"
 
 export const FabAddNew = () => {
 
     const { openDateModal } = useUIStore()
-    const { setActiveEvent } = useCalendarStore()
+    const { startClearActiveEvent } = useCalendarStore()
+
 
     const handleClickNew = () => {
+        startClearActiveEvent()
         openDateModal()
     }
 

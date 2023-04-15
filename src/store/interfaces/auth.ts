@@ -5,7 +5,7 @@ export type status =
 
 export interface initialStateAuth {
     status: status
-    user: { name: string, uid: string }
+    user: { name: string, uid: string, photoURL: string }
     errorMessage?: string | undefined
     successMessage?: string | undefined
 }
